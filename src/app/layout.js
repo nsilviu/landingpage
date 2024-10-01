@@ -24,6 +24,9 @@ const roboto = Roboto({
 export const metadata = {
   title: "PIA Auto Rulate",
   description: "Ofertele de Black Friday au venit mai devreme la PIA",
+  icons: {
+    icon: "/logos/pialogo.png", // Path to your favicon
+  },
 };
 
 export default function RootLayout({ children }) {
