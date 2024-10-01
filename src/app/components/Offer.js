@@ -51,7 +51,13 @@ const Offer = ({ offer }) => {
           <FaPhone className="h-5 w-5" />
         </a>
         <a
-          href="https://wa.me/?text=I'm interested in your offer"
+          href={
+            "https://wa.me/+40727359136?text=Sunt interesat de oferta" +
+            " " +
+            offer.model +
+            " cu pretul " +
+            offer.pretLista
+          }
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center bg-green-500 text-white py-2 px-3 rounded-xl hover:bg-green-600"

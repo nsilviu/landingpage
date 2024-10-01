@@ -34,7 +34,10 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div
+      className="min-h-screen bg-gray-100
+     flex flex-col"
+    >
       {/* Banner Section */}
       <section className="relative bg-gray-900 flex-grow">
         <div className="absolute inset-0">
