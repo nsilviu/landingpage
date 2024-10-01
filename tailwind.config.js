@@ -1,17 +1,11 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "media", // Enables dark mode based on user's system preference
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}", // Looks for Tailwind classes in your src/app folder
+    "./src/components/**/*.{js,ts,jsx,tsx}", // Looks for Tailwind classes in components
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

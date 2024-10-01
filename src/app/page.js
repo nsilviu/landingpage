@@ -1,100 +1,155 @@
+// pages/index.js
+"use client";
+import { useState } from "react";
+import Offer from "./components/Offer";
+import offers from "./data/offers";
+import brands from "./data/brands"; // Import the brands data
 import Image from "next/image";
+import Link from "next/link";
+import { PhoneIcon } from "@heroicons/react/solid";
+import { FaFacebookF, FaEnvelopeOpen, FaCar } from "react-icons/fa";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const handleBrandClick = (brand) => {
+    // If the clicked brand is already selected, reset to "All"
+    if (selectedBrand === brand) {
+      setSelectedBrand("All");
+    } else {
+      setSelectedBrand(brand); // Otherwise, set the selected brand
+    }
+  };
+  // State to track selected brand
+  const [selectedBrand, setSelectedBrand] = useState("All");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Filter offers based on selected brand
+  const filteredOffers = offers.filter((offer) => {
+    if (selectedBrand === "All") return true; // Show all cars if no brand is selected
+    if (selectedBrand === "Other") {
+      // Show cars that don't match any of the main brands
+      return !["Volkswagen", "Skoda", "Seat", "Cupra", "Audi"].includes(
+        offer.marca
+      );
+    }
+    return offer.marca === selectedBrand; // Show cars matching the selected brand
+  });
+
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col">
+      {/* Banner Section */}
+      <section className="relative bg-gray-900 flex-grow">
+        <div className="absolute inset-0">
+          <Image
+            className="w-full h-full object-cover opacity-30"
+            src="/vignetta_toamna.png"
+            alt="Dealership"
+            width={2680}
+            height={1080}
+            priority={false}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        <div className="relative container mx-auto px-6 py-10">
+          <div className="flex flex-col items-center justify-center text-center mb-10">
+            <a href="#">
+              <Image
+                src="/logos/pialogo.png"
+                className="w-16"
+                alt="Porsche Inter Auto Logo"
+                width={120}
+                height={120}
+              />
+            </a>
+            <h1 className="text-3xl p-5 text-white">Porsche Inter Auto</h1>
+          </div>
+          <h1 className="text-5xl font-black text-white mb-4">
+            PIA Auto Rulate
+          </h1>
+          <p className="text-xl text-gray-200 mb-8">
+            Black friday a venit mai devreme la Porsche Inter Auto
+          </p>
+          <button className="bg-orange-400 rounded-xl items-center align-middle">
+            <Link
+              href={"tel:0219229"}
+              className="inline-block bg-primary text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-dark hover:shadow-lg transform hover:scale-105 transition-transform duration-200"
+            >
+              Suna acum!
+            </Link>
+          </button>
+        </div>
+      </section>
+
+      {/* Brand Filter Section */}
+
+      <section className="container mx-auto px-6 py-6">
+        <h1 className="text-center text-3xl font-bold mb-10">
+          Filtreaza dupa marca
+        </h1>
+        <div className="flex flex-wrap gap-4 justify-center">
+          {brands.map((brand) => (
+            <div
+              key={brand.name}
+              onClick={() => handleBrandClick(brand.name)}
+              className={`flex items-center justify-center w-32 h-32 shadow-xl rounded-2xl cursor-pointer ${
+                selectedBrand === brand.name ? "ring-4 ring-primary" : ""
+              }`}
+            >
+              {/* Render icon for "Other", image for other brands */}
+              {brand.name === "Other" ? (
+                <span>
+                  <FaCar className="h-10 w-10 text-gray-500" />
+                  Other
+                </span>
+              ) : (
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="w-16"
+                  width={100}
+                  height={100}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Offer Section */}
+      <section className="py-10 flex-grow">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Car Offers</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-2">
+            {filteredOffers.map((offer, index) => (
+              <Offer key={index} offer={offer} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-900 text-gray-400">
+        <div className="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Porsche Inter Auto Romania. All
+            rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="mailto:pia@porsche.ro"
+              className="hover:text-white transition"
+            >
+              <FaEnvelopeOpen className="h-6 w-6" />
+            </a>
+            <a href="tel:+0219229" className="hover:text-white transition">
+              <PhoneIcon className="h-6 w-6" />
+            </a>
+            <a
+              href="https://facebook.com/piaromania"
+              className="hover:text-white transition"
+            >
+              <FaFacebookF className="h-6 w-6" />
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
