@@ -26,7 +26,7 @@ export default function Home() {
     if (selectedBrand === "All") return true; // Show all cars if no brand is selected
     if (selectedBrand === "Other") {
       // Show cars that don't match any of the main brands
-      return !["Volkswagen", "Skoda", "Seat", "Cupra", "Audi"].includes(
+      return !["Volkswagen", "Škoda", "SEAT", "Cupra", "Audi"].includes(
         offer.marca
       );
     }
@@ -70,9 +70,9 @@ export default function Home() {
           <button className="bg-orange-400 rounded-xl items-center align-middle">
             <Link
               href={"tel:0219229"}
-              className="inline-block bg-primary text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-dark hover:shadow-lg transform hover:scale-105 transition-transform duration-200"
+              className="inline-block bg-primary text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-primary-dark hover:shadow-lg transform hover:scale-105 transition-transform duration-200"
             >
-              Suna acum!
+              021 9229
             </Link>
           </button>
         </div>
