@@ -34,11 +34,9 @@ export default function Home() {
   });
 
   return (
-    <div
-      className="min-h-screen bg-gray-100
-     flex flex-col"
-    >
-      {/* Banner Section */}
+    <div className="min-h-screen flex flex-col">
+      <div>
+        {/* Banner Section
       <section className="relative bg-gray-900 flex-grow">
         <div className="absolute inset-0">
           <Image
@@ -79,12 +77,49 @@ export default function Home() {
             </Link>
           </button>
         </div>
-      </section>
-
+      </section> */}
+      </div>
+      <div className="flex flex-wrap justify-center align-middle">
+        <div className="flex flex-col items-center justify-center text-center w-screen bg-black px-5 pt-5">
+          <a href="#">
+            <Image
+              src="/logos/pialogo.png"
+              className="w-16"
+              alt="Porsche Inter Auto Logo"
+              width={120}
+              height={120}
+            />
+          </a>
+          <h1 className="text-xs font-light p-5 text-white">
+            Porsche Inter Auto
+          </h1>
+        </div>
+        <div className="flex justify-center align-middle w-[300px] object-contain sm:w-[600px] items-center text-center rounded-sm mt-3 mb-10">
+          <Image
+            className="rounded-xl shadow-2xl shadow-red-600"
+            src="/vignetta_toamna.png"
+            alt="Dealership"
+            width={500}
+            height={1080}
+            priority={false}
+          />
+        </div>
+        {/* <div className="flex flex-col gap-3 font-bold items-center align-middle justify-center">
+          <h1>Suna acum!</h1>
+          <button className="bg-orange-400 rounded-xl items-center align-middle">
+            <Link
+              href={"tel:0219229"}
+              className="inline-block bg-primary text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-primary-dark hover:shadow-lg transform hover:scale-105 transition-transform duration-200"
+            >
+              021 9229
+            </Link>
+          </button>
+        </div> */}
+      </div>
       {/* Brand Filter Section */}
 
       <section className="container mx-auto px-6 py-6">
-        <h1 className="text-center text-3xl font-bold mb-10">
+        <h1 className="text-center text-xl font-extralight roboto mb-5">
           Filtreaza dupa marca
         </h1>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -119,7 +154,9 @@ export default function Home() {
       {/* Offer Section */}
       <section className="py-10 flex-grow">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Car Offers</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            PIA Auto Rulate - Early Black Friday
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-2">
             {filteredOffers.map((offer, index) => (
               <Offer key={index} offer={offer} />
@@ -142,7 +179,11 @@ export default function Home() {
             >
               <FaEnvelopeOpen className="h-6 w-6" />
             </a>
-            <a href="tel:+0219229" className="hover:text-white transition">
+            <a
+              alt="buton_suna_footer"
+              href="tel:+0219229"
+              className="hover:text-white transition"
+            >
               <PhoneIcon className="h-6 w-6" />
             </a>
             <a

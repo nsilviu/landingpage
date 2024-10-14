@@ -39,18 +39,21 @@ const Offer = ({ offer }) => {
       {/* Action Buttons */}
       <div className="flex w-full justify-between items-center space-x-2">
         <a
+          alt="buton_exit_link_oferta"
           href={offer.link}
           className="flex items-center justify-center bg-gray-100 text-gray-900 py-2 px-4 rounded-xl flex-grow text-sm font-medium hover:bg-gray-200"
         >
           <MdInfo className="mr-2 h-5 w-5" /> Vezi detalii
         </a>
         <a
+          alt="buton_suna_oferta"
           href="tel:+0219229"
           className="flex items-center justify-center bg-gray-900 text-white py-2 px-3 rounded-xl hover:bg-gray-700"
         >
           <FaPhone className="h-5 w-5" />
         </a>
         <a
+          alt="buton_wapp_oferta"
           href={
             "https://wa.me/+40727359136?text=Sunt interesat de oferta" +
             " " +

@@ -5,7 +5,11 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}", // Looks for Tailwind classes in components
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-roboto)", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
