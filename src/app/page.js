@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PhoneIcon } from "@heroicons/react/solid";
 import { FaFacebookF, FaEnvelopeOpen, FaCar } from "react-icons/fa";
+import ConsentDialog from "./components/ConsentDialog";
 
 export default function Home() {
   const handleBrandClick = (brand) => {
@@ -195,6 +196,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <ConsentDialog />
     </div>
   );
 }
