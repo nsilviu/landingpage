@@ -7,36 +7,37 @@ const ConsentDialog = () => {
     const consent = localStorage.getItem("cookieConsent");
     if (!consent) {
       setShowDialog(true);
-    } else if (consent === "accepted") {
-      loadGoogleAnalytics();
+    } else {
+      // Update consent status based on stored preference
+      updateConsentStatus(consent);
     }
   }, []);
 
-  const loadGoogleAnalytics = () => {
-    const script = document.createElement("script");
-    script.src = `https://www.googletagmanager.com/gtag/js?id=G-YFZS7DYZYV`;
-    script.async = true;
-    document.head.appendChild(script);
-
-    const script2 = document.createElement("script");
-    script2.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YFZS7DYZYV');
-    `;
-    document.head.appendChild(script2);
+  const updateConsentStatus = (consentStatus) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "consent_update",
+      // Update the consent parameters based on user's choice
+      ad_storage: consentStatus === "accepted" ? "granted" : "denied",
+      analytics_storage: consentStatus === "accepted" ? "granted" : "denied",
+      functionality_storage:
+        consentStatus === "accepted" ? "granted" : "denied",
+      personalization_storage:
+        consentStatus === "accepted" ? "granted" : "denied",
+      security_storage: "granted", // Usually set to 'granted'
+    });
   };
 
   const handleAccept = () => {
     localStorage.setItem("cookieConsent", "accepted");
-    loadGoogleAnalytics();
     setShowDialog(false);
+    updateConsentStatus("accepted");
   };
 
   const handleDecline = () => {
     localStorage.setItem("cookieConsent", "declined");
     setShowDialog(false);
+    updateConsentStatus("declined");
   };
 
   if (!showDialog) return null;
@@ -46,12 +47,12 @@ const ConsentDialog = () => {
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         <p className="text-sm">
           Folosim cookie-uri pentru a personaliza conținutul, pentru a oferi
-          funcționalități social media si a analiza traficul.
+          funcționalități social media și a analiza traficul.
           <a
             href="https://www.porscheinterauto.ro/directiva-privind-fisierele-cookie"
             className="underline ml-2"
           >
-            Afla mai multe
+            Află mai multe
           </a>
           .
         </p>
