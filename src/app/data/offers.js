@@ -8,7 +8,7 @@ const offers = [
     ofertaSpeciala: 17500,
     avantajClient: 3400,
     link: "https://www.dasweltauto.ro/haendler/pbv2/10185/vehicle/1018501167",
-    image: "/oct/1167.webp",
+    image: "/oct/768.webp",
   },
   {
     dealer: "GW PPP",
