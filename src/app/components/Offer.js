@@ -59,7 +59,7 @@ const Offer = ({ offer }) => {
             " " +
             offer.model +
             " cu pretul " +
-            offer.pretLista
+            offer.ofertaSpeciala
           }
           target="_blank"
           rel="noopener noreferrer"
