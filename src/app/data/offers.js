@@ -18,7 +18,7 @@ const offers = [
     pretLista: 36700,
     ofertaSpeciala: 33700,
     avantajClient: 3000,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711411",
+    link: "https://www.dasweltauto.ro/vehicle/1021700006",
     image: "/oct/11411.avif",
   },
   {
@@ -51,7 +51,7 @@ const offers = [
     pretLista: 40950,
     ofertaSpeciala: 39000,
     avantajClient: 1950,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711374",
+    link: "https://www.dasweltauto.ro/vehicle/1021700090",
     image: "/oct/11374.avif",
   },
   {
@@ -95,7 +95,7 @@ const offers = [
     pretLista: 40850,
     ofertaSpeciala: 39200,
     avantajClient: 1650,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711441",
+    link: "https://www.dasweltauto.ro/vehicle/1021700007",
     image: "/oct/11441.avif",
   },
   {
@@ -128,7 +128,7 @@ const offers = [
     pretLista: 24900,
     ofertaSpeciala: 23400,
     avantajClient: 1500,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711382",
+    link: "https://www.dasweltauto.ro/vehicle/1021700066",
     image: "/oct/11382.avif",
   },
   {
@@ -139,7 +139,7 @@ const offers = [
     pretLista: 31300,
     ofertaSpeciala: 29800,
     avantajClient: 1500,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711409",
+    link: "https://www.dasweltauto.ro/vehicle/1021700005",
     image: "/oct/11409.avif",
   },
   {
@@ -150,7 +150,7 @@ const offers = [
     pretLista: 25850,
     ofertaSpeciala: 24400,
     avantajClient: 1450,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711380",
+    link: "https://www.dasweltauto.ro/vehicle/1021700092",
     image: "/oct/11380.avif",
   },
   {
@@ -172,7 +172,7 @@ const offers = [
     pretLista: 19700,
     ofertaSpeciala: 18300,
     avantajClient: 1400,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711304",
+    link: "https://www.dasweltauto.ro/vehicle/1021700072",
     image: "/oct/11304.webp",
   },
   {
@@ -183,7 +183,7 @@ const offers = [
     pretLista: 31900,
     ofertaSpeciala: 30500,
     avantajClient: 1400,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711299",
+    link: "https://www.dasweltauto.ro/vehicle/1021700162",
     image: "/oct/11299.webp",
   },
   {
@@ -194,7 +194,7 @@ const offers = [
     pretLista: 34500,
     ofertaSpeciala: 33100,
     avantajClient: 1400,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711403",
+    link: "https://www.dasweltauto.ro/vehicle/1021700002",
     image: "/oct/11403.avif",
   },
   {
@@ -205,7 +205,7 @@ const offers = [
     pretLista: 30800,
     ofertaSpeciala: 29500,
     avantajClient: 1300,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711315",
+    link: "https://www.dasweltauto.ro/vehicle/1021700164",
     image: "/oct/11315.webp",
   },
   {
@@ -216,7 +216,7 @@ const offers = [
     pretLista: 26500,
     ofertaSpeciala: 25300,
     avantajClient: 1200,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711260",
+    link: "https://www.dasweltauto.ro/vehicle/1021700089",
     image: "/oct/11260.webp",
   },
   {
@@ -260,7 +260,7 @@ const offers = [
     pretLista: 20500,
     ofertaSpeciala: 19400,
     avantajClient: 1100,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711384",
+    link: "https://www.dasweltauto.ro/vehicle/1021700068",
     image: "/oct/11384.avif",
   },
   {
@@ -304,7 +304,7 @@ const offers = [
     pretLista: 18900,
     ofertaSpeciala: 17900,
     avantajClient: 1000,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711328",
+    link: "https://www.dasweltauto.ro/vehicle/1021700076",
     image: "/oct/11328.webp",
   },
   {
@@ -326,7 +326,7 @@ const offers = [
     pretLista: 18850,
     ofertaSpeciala: 17900,
     avantajClient: 950,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711326",
+    link: "https://www.dasweltauto.ro/vehicle/1021700078",
     image: "/oct/11326.webp",
   },
   {
@@ -337,7 +337,7 @@ const offers = [
     pretLista: 18850,
     ofertaSpeciala: 17900,
     avantajClient: 950,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711325",
+    link: "https://www.dasweltauto.ro/vehicle/1021700064",
     image: "/oct/11325.webp",
   },
   {
@@ -348,7 +348,7 @@ const offers = [
     pretLista: 18850,
     ofertaSpeciala: 17900,
     avantajClient: 950,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711324",
+    link: "https://www.dasweltauto.ro/vehicle/1021700080",
     image: "/oct/11324.webp",
   },
   {
@@ -359,7 +359,7 @@ const offers = [
     pretLista: 18850,
     ofertaSpeciala: 17900,
     avantajClient: 950,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711323",
+    link: "https://www.dasweltauto.ro/vehicle/1021700074",
     image: "/oct/11323.webp",
   },
   {
@@ -403,7 +403,7 @@ const offers = [
     pretLista: 19250,
     ofertaSpeciala: 18400,
     avantajClient: 850,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711385",
+    link: "https://www.dasweltauto.ro/vehicle/1021700070",
     image: "/oct/11385.avif",
   },
   {
@@ -414,7 +414,7 @@ const offers = [
     pretLista: 15200,
     ofertaSpeciala: 14500,
     avantajClient: 700,
-    link: "https://www.dasweltauto.ro/haendler/porschepipera/10217/vehicle/1021711289",
+    link: "https://www.dasweltauto.ro/vehicle/1021700082",
     image: "/oct/11289.webp",
   },
   {
