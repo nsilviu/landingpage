@@ -12,6 +12,8 @@
     "@fontsource/poppins": "^5.1.0",
     "@fontsource/roboto": "^5.1.0",
     "@heroicons/react": "^1.0.6",
+    "@next/third-parties": "^15.0.3",
+    "js-cookie": "^3.0.5",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
